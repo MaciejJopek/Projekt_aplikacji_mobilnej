@@ -4,7 +4,6 @@ Celem projekty jest stworzenie aplikacji mobilnej będącej aplikacją treningow
 ## Funkcjonalności
 * Zapisywanie oraz śledzenie treningów zapisanych w bazie danych
 * Stoper
-* Podstawowe plany treningowe
 * Kalkulator BMI
 * Wykres przedstawiający postępy treningowe
 ## Narzędza, język programowania

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AplikacjaTreningowa</string>
+    <string name="stat_button">Statystyki</string>
+    <string name="bmi_button">Kalkulator BMI</string>
+    <string name="stoper">Stoper</string>
+    <string name="plan_treningowy">Plany treningowe</string>
+    <string name="trening">Trening</string>
+</resources>

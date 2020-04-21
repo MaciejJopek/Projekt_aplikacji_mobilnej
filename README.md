@@ -12,3 +12,10 @@ Aplikakacja będzie przechowywała dane lokalnie na urządzeniu. Przewidziany je
 
 ## Narzędza, język programowania
 Android Studio, java, baza danych SQLite, AnyChart Android Charts(biblioteka do przedstawienia danych na wykresie)
+
+## Raport II (20.04.2020)
+Stworzenie bazy danych przechowującej niezbędne informacje. Stworzenie stopera. Stworzenie statystkyk (wagi) oraz możliwość zapisu do bazy danych. 
+Plany na kolejne tygodnie:
+* Dalsza praca nad layoutem aplikacji
+* Powiązanie danych znajdujących sie w bazie danych z wykresami
+* Stworzenie kalkulatora BMI

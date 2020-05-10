@@ -19,3 +19,10 @@ Plany na kolejne tygodnie:
 * Dalsza praca nad layoutem aplikacji
 * Powiązanie danych znajdujących sie w bazie danych z wykresami
 * Stworzenie kalkulatora BMI
+
+## Raport III (10.05.2020)
+Możliwość wyświetlania danych zapisanych w bazie danych na wykresie. Stworzenie kalkulatora BMI (+ interpretacja wyniku). Stworzenie dashboardu.
+Plany na kolejne tygodnie:
+* Dalsza praca nad layoutem aplikacji
+* Dodanie nowych statystyk możliwych do zapisu w bazie dancyh
+* Dodanie przykładowych planów treningowych

@@ -43,6 +43,7 @@ public class wagawykres extends AppCompatActivity {
 
         series = new LineGraphSeries();
         series.setColor(Color.WHITE);
+        series.setDrawDataPoints(true);
         //graphView.addSeries(series);
 
         database=FirebaseDatabase.getInstance();
@@ -51,6 +52,9 @@ public class wagawykres extends AppCompatActivity {
         setListeners();
 
         graphView.addSeries(series);
+        graphView.getGridLabelRenderer().setGridColor(Color.WHITE);
+        graphView.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
+        graphView.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
         graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
         graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override

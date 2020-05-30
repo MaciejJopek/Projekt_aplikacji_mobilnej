@@ -22,6 +22,7 @@ public class Opcje extends AppCompatActivity {
         LinearLayout button_stoper = (LinearLayout) findViewById(R.id.Stoper);
         LinearLayout button_bmi = (LinearLayout) findViewById(R.id. Bmi);
         LinearLayout button_statystyki = (LinearLayout) findViewById(R.id.Statystyki);
+        LinearLayout button_przykladwe_cwiczenia = (LinearLayout) findViewById(R.id.Cwiczenia);
 
         button_stoper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,12 @@ public class Opcje extends AppCompatActivity {
             }
         });
 
+        button_przykladwe_cwiczenia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCwieczenia();
+            }
+        });
     }
     public void openStoper() {
         Intent intent = new Intent(this,Stoper.class);
@@ -55,6 +62,10 @@ public class Opcje extends AppCompatActivity {
     }
     public void openStatystyki(){
         Intent intent = new Intent(this, statystyki.class);
+        startActivity(intent);
+    }
+    public void openCwieczenia(){
+        Intent intent = new Intent(this, przykladycwiczen.class);
         startActivity(intent);
     }
 }

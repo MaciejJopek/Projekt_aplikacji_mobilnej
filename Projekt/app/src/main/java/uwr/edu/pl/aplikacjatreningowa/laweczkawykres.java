@@ -43,6 +43,7 @@ public class laweczkawykres extends AppCompatActivity {
 
         series = new LineGraphSeries();
         series.setColor(Color.WHITE);
+        series.setDrawDataPoints(true);
         //graphView.addSeries(series);
 
         database=FirebaseDatabase.getInstance();
@@ -52,6 +53,9 @@ public class laweczkawykres extends AppCompatActivity {
 
         graphView.addSeries(series);
         graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
+        graphView.getGridLabelRenderer().setGridColor(Color.WHITE);
+        graphView.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
+        graphView.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
         graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
             @Override
             public String formatLabel(double value, boolean isValueX) {

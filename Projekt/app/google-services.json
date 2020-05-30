@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "247682002677",
+    "firebase_url": "https://aplikacjatreningowa.firebaseio.com",
+    "project_id": "aplikacjatreningowa",
+    "storage_bucket": "aplikacjatreningowa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247682002677:android:e39f252d44c88c9581dfbc",
+        "android_client_info": {
+          "package_name": "uwr.edu.pl.aplikacjatreningowa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247682002677-iuqmt831ajq3ethdsbpiq66ha17ikhcj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uwr.edu.pl.aplikacjatreningowa",
+            "certificate_hash": "4b95ab551b9cc0e20af1e4dd863a98cfe4dd24ec"
+          }
+        },
+        {
+          "client_id": "247682002677-rmu7a7ugdv1p90e89vsd0r98rn357afe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB03pn6fgfy5Z_SzoxYSon8zDu0kP4pEzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247682002677-rmu7a7ugdv1p90e89vsd0r98rn357afe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

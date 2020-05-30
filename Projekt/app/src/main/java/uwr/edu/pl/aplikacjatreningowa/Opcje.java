@@ -10,14 +10,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.time.Instant;
+
 public class Opcje extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opcje);
-        /*
+
         LinearLayout button_stoper = (LinearLayout) findViewById(R.id.Stoper);
+        LinearLayout button_bmi = (LinearLayout) findViewById(R.id. Bmi);
+        LinearLayout button_statystyki = (LinearLayout) findViewById(R.id.Statystyki);
 
         button_stoper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,10 +29,32 @@ public class Opcje extends AppCompatActivity {
                 openStoper();
             }
         });
-    */
+
+        button_bmi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBmi();
+            }
+        });
+
+        button_statystyki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStatystyki();
+            }
+        });
+
     }
     public void openStoper() {
         Intent intent = new Intent(this,Stoper.class);
+        startActivity(intent);
+    }
+    public void openBmi(){
+        Intent intent = new Intent(this, Bmi.class);
+        startActivity(intent);
+    }
+    public void openStatystyki(){
+        Intent intent = new Intent(this, statystyki.class);
         startActivity(intent);
     }
 }

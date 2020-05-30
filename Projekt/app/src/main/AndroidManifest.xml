@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Opcje"></activity>
+        <activity android:name=".laweczkawykres"></activity>
+        <activity android:name=".statystyki" />
+        <activity android:name=".wagawykres" />
+        <activity android:name=".bmigirls" />
+        <activity android:name=".BMIgraph" />
+        <activity android:name=".badBmi" />
+        <activity android:name=".goodBmi" />
+        <activity android:name=".Bmi" />
+        <activity android:name=".Opcje" />
         <activity android:name=".Stoper" />
         <activity android:name=".MainActivity">
             <intent-filter>

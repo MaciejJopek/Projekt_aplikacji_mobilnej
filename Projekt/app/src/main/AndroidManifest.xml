@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FBW"></activity>
+        <activity android:name=".hantlewykres"></activity>
+        <activity android:name=".przysiadywykres" />
+        <activity android:name=".FBW" />
         <activity android:name=".przykladycwiczen" />
         <activity android:name=".laweczkawykres" />
         <activity android:name=".statystyki" />

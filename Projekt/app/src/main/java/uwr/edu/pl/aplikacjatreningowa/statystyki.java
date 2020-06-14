@@ -16,6 +16,8 @@ public class statystyki extends AppCompatActivity {
 
         LinearLayout button_waga = (LinearLayout) findViewById(R.id.Waga);
         LinearLayout button_laweczka = (LinearLayout) findViewById(R.id.Laweczka);
+        LinearLayout button_przysiady = (LinearLayout) findViewById(R.id.Przysiady);
+        LinearLayout button_Hantle = (LinearLayout) findViewById(R.id.Hantle);
         button_laweczka.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +30,18 @@ public class statystyki extends AppCompatActivity {
                 openwaga();
             }
         });
+        button_przysiady.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openprzysiady();
+            }
+        });
+        button_Hantle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openhantle();
+            }
+        });
     }
 
     private void openlaweczka() {
@@ -37,6 +51,14 @@ public class statystyki extends AppCompatActivity {
 
     public void openwaga() {
         Intent intent = new Intent(this,wagawykres.class);
+        startActivity(intent);
+    }
+    public void openprzysiady() {
+        Intent intent = new Intent(this,przysiadywykres.class);
+        startActivity(intent);
+    }
+    public void openhantle() {
+        Intent intent = new Intent(this,hantlewykres.class);
         startActivity(intent);
     }
 }

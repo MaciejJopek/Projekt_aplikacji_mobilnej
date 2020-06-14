@@ -94,6 +94,7 @@
             app:cardElevation="6dp">
 
             <LinearLayout
+                android:id="@+id/Przysiady"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -124,6 +125,7 @@
             app:cardElevation="6dp">
 
             <LinearLayout
+                android:id="@+id/Hantle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

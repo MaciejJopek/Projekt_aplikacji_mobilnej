@@ -5,12 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import java.time.Instant;
 
 public class Opcje extends AppCompatActivity {
 
@@ -23,6 +18,7 @@ public class Opcje extends AppCompatActivity {
         LinearLayout button_bmi = (LinearLayout) findViewById(R.id. Bmi);
         LinearLayout button_statystyki = (LinearLayout) findViewById(R.id.Statystyki);
         LinearLayout button_przykladwe_cwiczenia = (LinearLayout) findViewById(R.id.Cwiczenia);
+        LinearLayout button_trening = (LinearLayout) findViewById(R.id.trening);
 
         button_stoper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +47,12 @@ public class Opcje extends AppCompatActivity {
                 openCwieczenia();
             }
         });
+        button_trening.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTrening();
+            }
+        });
     }
     public void openStoper() {
         Intent intent = new Intent(this,Stoper.class);
@@ -66,6 +68,10 @@ public class Opcje extends AppCompatActivity {
     }
     public void openCwieczenia(){
         Intent intent = new Intent(this, przykladycwiczen.class);
+        startActivity(intent);
+    }
+    public void openTrening(){
+        Intent intent = new Intent(this, Notatnik.class);
         startActivity(intent);
     }
 }

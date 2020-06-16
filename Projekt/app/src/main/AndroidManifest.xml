@@ -5,25 +5,60 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Notatnik"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".hantlewykres"></activity>
-        <activity android:name=".przysiadywykres" />
-        <activity android:name=".FBW" />
-        <activity android:name=".przykladycwiczen" />
-        <activity android:name=".laweczkawykres" />
-        <activity android:name=".statystyki" />
-        <activity android:name=".wagawykres" />
-        <activity android:name=".bmigirls" />
-        <activity android:name=".BMIgraph" />
-        <activity android:name=".badBmi" />
-        <activity android:name=".goodBmi" />
-        <activity android:name=".Bmi" />
-        <activity android:name=".Opcje" />
-        <activity android:name=".Stoper" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".EditeNoteActivity"></activity>
+        <activity
+            android:name=".Notatnik"
+            android:label="@string/title_activity_notetnik"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".hantlewykres"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".przysiadywykres"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".FBW"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".przykladycwiczen"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".laweczkawykres"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".statystyki"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".wagawykres"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".bmigirls"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".BMIgraph"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".badBmi"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".goodBmi"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Bmi"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Opcje"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Stoper"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -52,7 +52,7 @@ public class EditeNoteActivity extends AppCompatActivity {
             long date = new Date().getTime();
             temp.setNoteText(text);
             temp.setNoteDate(date);
-            if (temp.getId()==-1)
+            if (temp.getId() == temp.getId())
                 dao.insertNote(temp);
             else dao.updateNote(temp);
 

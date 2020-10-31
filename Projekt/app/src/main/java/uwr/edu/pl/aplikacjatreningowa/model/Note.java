@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "notes")
 public class Note {
     @PrimaryKey(autoGenerate = true)
-    private int id =-1;
+    private int id;
     @ColumnInfo(name = "text")
     private  String noteText;
     @ColumnInfo(name = "date")
@@ -16,7 +16,7 @@ public class Note {
     public Note() {
     }
 
-    public Note(String noteText, long noteDate){
+    public Note( String noteText, long noteDate){
         this.noteText = noteText;
         this.noteDate = noteDate;
     }

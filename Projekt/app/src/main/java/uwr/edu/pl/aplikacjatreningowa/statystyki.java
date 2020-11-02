@@ -70,7 +70,7 @@ public class statystyki extends AppCompatActivity {
         startActivity(intent);
     }
     public void openbmi() {
-        Intent intent = new Intent(this,hantlewykres.class);
+        Intent intent = new Intent(this,bmiwykres.class);
         startActivity(intent);
     }
 }

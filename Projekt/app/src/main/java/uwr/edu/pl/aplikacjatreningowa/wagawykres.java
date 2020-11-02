@@ -19,6 +19,7 @@ import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -48,24 +49,33 @@ public class wagawykres extends AppCompatActivity {
 
         database=FirebaseDatabase.getInstance();
         reference=database.getReference("chartTable");
-
+//        double max_x = 12; // or max(datapoints.x)
+//        graphView.getViewport().setXAxisBoundsManual(true);
+//        graphView.getViewport().setMaxX(max_x);
         setListeners();
-
         graphView.addSeries(series);
         graphView.getGridLabelRenderer().setGridColor(Color.WHITE);
         graphView.getGridLabelRenderer().setHorizontalLabelsColor(Color.WHITE);
         graphView.getGridLabelRenderer().setVerticalLabelsColor(Color.WHITE);
-        graphView.getGridLabelRenderer().setNumHorizontalLabels(7);
-        graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
-            @Override
-            public String formatLabel(double value, boolean isValueX) {
-                if (isValueX){
-                    return sdf.format(new Date((long) value));
-                }else {
-                    return super.formatLabel(value, isValueX);
-                }
-            }
-        });
+        graphView.getViewport().setScalable(true);
+        graphView.getViewport().setScalableY(true);
+        graphView.getGridLabelRenderer().setNumHorizontalLabels(10);
+        NumberFormat nf = NumberFormat.getInstance();
+        nf.setMinimumFractionDigits(0);
+        nf.setMinimumIntegerDigits(0);
+
+        graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(nf, nf));
+
+//        graphView.getGridLabelRenderer().setLabelFormatter(new DefaultLabelFormatter(){
+//            @Override
+//            public String formatLabel(double value, boolean isValueX) {
+//                if (isValueX){
+//                    return sdf.format(new Date((long) value));
+//                }else {
+//                    return super.formatLabel(value, isValueX);
+//                }
+//            }
+//        });
     }
 
     private void setListeners() {
@@ -73,7 +83,9 @@ public class wagawykres extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String id = reference.push().getKey();
-                long x = new Date().getTime();
+                Date date = new Date();
+                int mMonth = date.getMonth();
+                int x = 1;
                 int y = Integer.parseInt(yValue.getText().toString());
 
                 PointValue pointValue = new PointValue(x,y);
@@ -94,7 +106,7 @@ public class wagawykres extends AppCompatActivity {
                 for (DataSnapshot myDataSnapshot: dataSnapshot.getChildren())
                 {
                     PointValue pointValue = myDataSnapshot.getValue(PointValue.class);
-                    dp[index]=new DataPoint(pointValue.getxValue(),pointValue.getyValue());
+                    dp[index]=new DataPoint(index,pointValue.getyValue());
                     index++;
                 }
                 series.resetData(dp);

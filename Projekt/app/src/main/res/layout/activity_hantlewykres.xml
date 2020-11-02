@@ -37,8 +37,8 @@
         app:layout_constraintStart_toEndOf="@+id/inputTextY"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.jjoe64.graphview.GraphView
-        android:id="@+id/graph"
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="20dp"

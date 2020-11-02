@@ -1,17 +1,17 @@
 package uwr.edu.pl.aplikacjatreningowa;
 
 public class PointValue {
-    long xValue;
+    int xValue;
     int yValue;
     public PointValue() {
 
     }
-    public PointValue(long xValue, int yValue){
+    public PointValue(int xValue, int yValue){
         this.xValue=xValue;
         this.yValue=yValue;
     }
 
-    public long getxValue() {
+    public int getxValue() {
         return xValue;
     }
 

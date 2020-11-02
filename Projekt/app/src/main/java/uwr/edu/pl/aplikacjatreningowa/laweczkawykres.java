@@ -73,7 +73,7 @@ public class laweczkawykres extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String id = reference.push().getKey();
-                long x = new Date().getTime();
+                int x = 1;
                 int y = Integer.parseInt(yValue.getText().toString());
 
                 PointValue pointValue = new PointValue(x,y);

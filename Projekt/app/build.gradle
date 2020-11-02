@@ -45,5 +45,5 @@ dependencies {
     annotationProcessor 'androidx.room:room-compiler:2.2.5'
     implementation 'androidx.paging:paging-runtime:2.1.2'
     testImplementation 'androidx.room:room-testing:2.2.5'
-
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

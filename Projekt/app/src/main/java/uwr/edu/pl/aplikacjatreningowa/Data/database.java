@@ -22,6 +22,7 @@ public class database extends SQLiteOpenHelper {
                 constant.TABLE_NAME + " (" +
                 constant.KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 constant.DATE + " STRING, " +
+                constant.TYPES + " STRING, " +
                 constant.yAXIS + " STRING);";
         db.execSQL(BARCHART_TABLE);
     }
@@ -33,20 +34,21 @@ public class database extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public void saveDate(String valX, String valY){
+    public void saveDate(String valX, String valY, String typ){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
         values.put(constant.DATE, valX);
         values.put(constant.yAXIS, valY);
+        values.put(constant.TYPES, typ);
 
         db.insert(constant.TABLE_NAME, null, values);
 
     }
-    public ArrayList<String> queryXData(){
+    public ArrayList<String> queryXData(String typ){
         SQLiteDatabase db =this.getWritableDatabase();
         ArrayList<String> xData = new ArrayList<String>();
-        String query = "SELECT " + constant.DATE + " FROM " + constant.TABLE_NAME + " GROUP BY " + constant.DATE;
+        String query = "SELECT " + constant.DATE + " FROM " + constant.TABLE_NAME + " WHERE types=" + typ + " GROUP BY " + constant.DATE;
         Cursor cursor = db.rawQuery(query, null);
         for (cursor.moveToFirst(); !cursor.isAfterLast();cursor.moveToNext()){
             xData.add(cursor.getString(0));
@@ -55,10 +57,10 @@ public class database extends SQLiteOpenHelper {
         cursor.close();
         return xData;
     }
-    public ArrayList<String> queryYData(){
+    public ArrayList<String> queryYData(String typ){
         SQLiteDatabase db =this.getWritableDatabase();
         ArrayList<String> yData = new ArrayList<String>();
-        String query = "SELECT " + constant.yAXIS + " FROM " + constant.TABLE_NAME + " WHERE " + constant.yAXIS + " IS NOT NULL " + " GROUP BY " + constant.DATE;
+        String query = "SELECT " + constant.yAXIS + " FROM " + constant.TABLE_NAME + " WHERE " + constant.yAXIS + " IS NOT NULL AND types=" + typ  + " GROUP BY " + constant.DATE;
         //String query = "SELECT " +constant.yAXIS + " FROM " + constant.TABLE_NAME + " ORDER BY id DESC LIMIT 1";
 //        String query = "SELECT " +constant.yAXIS + " FROM ( SELECT * FROM " + constant.TABLE_NAME + " ORDER BY id DESC LIMIT 1) AS x GROUP BY " + constant.DATE;
         Cursor cursor = db.rawQuery(query, null);

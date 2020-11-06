@@ -18,7 +18,6 @@ public class statystyki extends AppCompatActivity {
         LinearLayout button_laweczka = (LinearLayout) findViewById(R.id.Laweczka);
         LinearLayout button_przysiady = (LinearLayout) findViewById(R.id.Przysiady);
         LinearLayout button_Hantle = (LinearLayout) findViewById(R.id.Hantle);
-        LinearLayout button_bmi = (LinearLayout) findViewById(R.id.Bmi);
 
         button_laweczka.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,12 +41,6 @@ public class statystyki extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openhantle();
-            }
-        });
-        button_bmi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openbmi();
             }
         });
     }

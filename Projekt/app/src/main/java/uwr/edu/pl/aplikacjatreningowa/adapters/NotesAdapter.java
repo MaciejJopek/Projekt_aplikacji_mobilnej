@@ -56,11 +56,10 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder>{
     }
 
     private String tytul_fun(Note note) {
-        note.getNoteText();
         tytul = note.getNoteText();
         String lines[] = tytul.split("\\r?\\n");
-        String a = lines[0].trim();
-        return a;
+        String title = lines[0].trim();
+        return title;
     }
 
     @Override

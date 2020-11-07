@@ -104,7 +104,8 @@ public class hantlewykres extends AppCompatActivity {
         xAxis.isCenterAxisLabelsEnabled();
         xAxis.setTextColor(Color.WHITE);
         //xAxis.setGranularityEnabled(true);
-
+        data.setValueTextColor(Color.WHITE);
+        data.setValueTextSize(15);
         YAxis rightAxis = barChart.getAxisRight();
         rightAxis.setEnabled(false);
 

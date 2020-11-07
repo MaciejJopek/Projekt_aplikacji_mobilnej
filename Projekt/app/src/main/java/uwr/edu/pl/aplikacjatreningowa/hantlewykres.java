@@ -9,6 +9,7 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -110,9 +111,13 @@ public class hantlewykres extends AppCompatActivity {
         //barChart.setMaxVisibleValueCount(5);
         barChart.setVisibleXRangeMaximum(10);
         barChart.setBackgroundColor(12);
-//        barChart.setFitBars(true);
+        barChart.setFitBars(true);
         barChart.moveViewToX(10);
-
+        Description description = new Description();
+        description.setText("Data");
+        description.setTextColor(Color.WHITE);
+        barChart.setDescription(description);
+        barChart.getAxisLeft().setTextColor(Color.WHITE);
 
     }
 }

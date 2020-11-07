@@ -110,7 +110,7 @@ public class Notatnik extends AppCompatActivity implements NoteEventListener {
     @Override
     public void onNoteLongClick(final Note note) {
         new AlertDialog.Builder(this)
-                .setTitle(R.string.app_name)
+                .setTitle("Usunąć notatkę??")
                 .setNegativeButton("Wróć", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

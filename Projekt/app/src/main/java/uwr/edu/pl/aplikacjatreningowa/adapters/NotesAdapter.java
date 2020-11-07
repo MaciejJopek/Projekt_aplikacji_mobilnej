@@ -19,6 +19,7 @@ import uwr.edu.pl.aplikacjatreningowa.utils.NoteUtils;
 public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder>{
     private Context context;
     private ArrayList<Note> notes;
+    private String tytul;
     private NoteEventListener listener;
     public NotesAdapter(Context context,ArrayList<Note> notes)
     {
@@ -35,7 +36,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder>{
     public void onBindViewHolder(NoteHolder holder, int position) {
         final Note note = getNote(position);
         if (note != null){
-            holder.noteText.setText(note.getNoteText());
+            holder.noteText.setText(tytul_fun(note));
             holder.noteDate.setText(NoteUtils.dateFromLong(note.getNoteDate()));
 
             holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +53,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteHolder>{
                 }
             });
         }
+    }
+
+    private String tytul_fun(Note note) {
+        note.getNoteText();
+        tytul = note.getNoteText();
+        String lines[] = tytul.split("\\r?\\n");
+        String a = lines[0].trim();
+        return a;
     }
 
     @Override

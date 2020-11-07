@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -90,11 +91,11 @@ public class wagawykres extends AppCompatActivity {
         dataSets1.add(dataSet);
 
         BarData data = new BarData(dataSets1);
-
+        data.setValueTextColor(Color.WHITE);
+        data.setValueTextSize(15);
         barChart.getXAxis().setValueFormatter(new IndexAxisValueFormatter(xVals));
 
         barChart.setData(data);
-
 
         XAxis xAxis = barChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
@@ -113,7 +114,11 @@ public class wagawykres extends AppCompatActivity {
         barChart.setBackgroundColor(12);
         barChart.setFitBars(true);
         barChart.moveViewToX(10);
-
+        Description description = new Description();
+        description.setText("Data");
+        description.setTextColor(Color.WHITE);
+        barChart.setDescription(description);
+        barChart.getAxisLeft().setTextColor(Color.WHITE);
     }
 
 }
